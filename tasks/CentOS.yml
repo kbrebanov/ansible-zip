@@ -1,0 +1,6 @@
+---
+# tasks file for zip (CentOS specific)
+
+- name: Install zip package
+  yum: name=zip state=present
+  tags: zip

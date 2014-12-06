@@ -1,7 +1,14 @@
 ---
 # tasks file for zip
 
-- name: Install zip package
-  yum: name=zip state=present
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
   tags: zip
-  
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: zip
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: zip

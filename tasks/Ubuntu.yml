@@ -1,0 +1,6 @@
+---
+# tasks file for zip (Ubuntu specific)
+
+- name: Install zip package
+  apt: name=zip state=present update_cache=yes
+  tags: zip
