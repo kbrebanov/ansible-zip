@@ -1,6 +1,7 @@
 ---
 # tasks file for zip (Ubuntu specific)
 
-- name: Install zip package
-  apt: name=zip state=present update_cache=yes
+- name: Install zip packages
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: zip_packages
   tags: zip
