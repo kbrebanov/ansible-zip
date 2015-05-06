@@ -1,0 +1,21 @@
+box: ubuntu:14.04
+
+build:
+  steps:
+    - script:
+        name: Install Ansible
+        code: |
+          sudo apt-get update -qq
+          pip install ansible
+    - script:
+        name: Check role/playbook syntax
+        code: |
+          ansible-playbook -i tests/inventory --syntax-check tests/test.yml
+    - script:
+        name: Run the role/playbook with ansible-playbook
+        code: |
+          ansible-playbook -i tests/inventory --connection=local --sudo tests/test.yml
+    - script:
+        name: Run the role/playbook again to ensure it is idempotent
+        code: |
+          ansible-playbook -i tests/inventory --connection=local --sudo tests/test.yml | grep -q 'changed=0.*failed=0' && (echo 'Idempotence test: pass' && exit 0) || (echo 'Idempotence test: fail' && exit 1)
