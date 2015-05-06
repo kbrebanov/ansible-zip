@@ -1,8 +1,6 @@
 zip
 ===
 
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.zip-660198.svg)](https://galaxy.ansible.com/list#/roles/3293)
-
 Installs zip
 
 Requirements
