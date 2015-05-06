@@ -1,4 +1,5 @@
-box: ansible/ubuntu14.04-ansible
+box:
+  id: ansible/ubuntu14.04-ansible
 
 build:
   steps:
