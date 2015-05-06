@@ -1,5 +1,4 @@
-box:
-  id: ansible/ubuntu14.04-ansible
+box: wercker/ubuntu14.04
 
 build:
   steps:
