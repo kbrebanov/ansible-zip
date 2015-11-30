@@ -12,3 +12,7 @@
 - include: Ubuntu.yml
   when: ansible_distribution == "Ubuntu"
   tags: zip
+
+- include: FreeBSD.yml
+  when: ansible_distribution == "FreeBSD"
+  tags: zip
