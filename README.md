@@ -1,6 +1,8 @@
 zip
 ===
 
+[![Build Status](https://travis-ci.org/kbrebanov/zip.svg?branch=master)](https://travis-ci.org/kbrebanov/zip)
+
 Installs zip
 
 Requirements
