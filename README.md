@@ -1,7 +1,7 @@
 zip
 ===
 
-[![Build Status](https://travis-ci.org/kbrebanov/ansible-zip.svg?branch=master)](https://travis-ci.org/kbrebanov/zip)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-zip.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-zip)
 
 Installs zip
 
