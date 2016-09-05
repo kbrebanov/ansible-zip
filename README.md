@@ -8,7 +8,7 @@ Installs zip
 Requirements
 ------------
 
-This role requires Ansible 1.4 or higher.
+This role requires Ansible 1.9 or higher.
 
 Role Variables
 --------------
@@ -24,10 +24,10 @@ Example Playbook
 ----------------
 
 Install zip
-```
+```yaml
 - hosts: all
   roles:
-    - { role: kbrebanov.zip }
+    - name: kbrebanov.zip
 ```
 
 License

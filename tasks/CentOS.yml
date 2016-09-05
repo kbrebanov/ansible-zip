@@ -2,6 +2,11 @@
 # tasks file for zip (CentOS specific)
 
 - name: Install zip packages
-  yum: name={{ item }} state=present
-  with_items: zip_packages
-  tags: zip
+  yum:
+    name: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - "{{ zip_packages }}"
+  tags:
+    - zip
