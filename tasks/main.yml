@@ -2,11 +2,11 @@
 # tasks file for zip
 
 - name: Include distribution specific variables
-  include_vars: "{{ ansible_distribution|lower }}.yml"
+  include_vars: "{{ ansible_distribution }}.yml"
   tags:
     - zip
 
 - name: Include distribution specific tasks
-  include: "{{ ansible_distribution|lower }}.yml"
+  include: "{{ ansible_distribution }}.yml"
   tags:
     - zip

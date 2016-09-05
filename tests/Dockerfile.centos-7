@@ -24,7 +24,7 @@ yum clean all
 RUN yum -y install ansible
 
 # Create Ansible configuration file
-RUN echo -e "[defaults]\nroles_path=/etc/ansible/roles" > /etc/ansible/ansible.cfg
+RUN echo -e "[defaults]\nroles_path = /etc/ansible/roles\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
 
 # Create Ansible inventory file
 RUN echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
