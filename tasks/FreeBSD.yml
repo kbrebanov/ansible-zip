@@ -1,7 +1,0 @@
----
-# tasks file for zip (FreeBSD specific)
-
-- name: Install zip packages
-  pkgng: name={{ item }} state=present
-  with_items: zip_packages
-  tags: zip
